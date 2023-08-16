@@ -1,0 +1,11 @@
+<div class="container d-flex align-items-center justify-content-center mt-4 flex-column">
+<h2 class="h2">New Restaurant</h2>
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name, class: "form-control" %>
+  <%= f.input :address, class: "form-control" %>
+  <%= f.input :phone_number, class: "form-control" %>
+  <%= f.input :category, class: "form-control" %>
+  <%= f.submit class: "btn btn-primary mt-4 w-100" %>
+<% end %>
+<%= link_to "Go back", restaurants_path, class: "btn btn-danger mt-4" %>
+</div>

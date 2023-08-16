@@ -1,0 +1,19 @@
+<div class="container d-flex align-items-start justify-content-center mt-4 flex-column">
+<h2 class="h2">Restaurant Details</h2>
+<ul class="list-group">
+<li class="list-group-item">Name:  <%= @restaurant.name %></li>
+<li class="list-group-item">Address:  <%= @restaurant.address %></li>
+<li class="list-group-item">Phone:  <%= @restaurant.phone_number %></li>
+<li class="list-group-item">Category:  <%= @restaurant.category %></li>
+</ul>
+<div class="d-flex flex-row gap-2">
+  <%= link_to "Go back", restaurants_path, class: "btn btn-primary mt-4" %>
+</div>
+<h3 class="h3 mt-4">Reviews</h3>
+<ul class="list-group">
+<% @restaurant.reviews.each do |review| %>
+<li class="list-group-item"><%= review.content %> - <%= review.rating %></li>
+<% end %>
+</ul>
+<%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: "btn btn-warning mt-4" %>
+</div>

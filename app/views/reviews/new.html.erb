@@ -1,0 +1,8 @@
+<div class="container d-flex align-items-start justify-content-center mt-4 flex-column">
+<p>Give your review</p>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content, class: "form-control" %>
+  <%= f.input :rating, class: "form-control" %>
+  <%= f.submit class: "btn btn-primary mt-4 w-100" %>
+<% end %>
+</div>

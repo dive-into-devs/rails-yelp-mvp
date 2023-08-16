@@ -1,0 +1,9 @@
+<div class="container d-flex align-items-center justify-content-center mt-4 flex-column">
+  <h2 class="h2">Our Restaurants List</h2>
+  <div class="d-flex flex-row list-group flex-wrap">
+    <% @restaurants.each do |restaurant| %>
+    <%=link_to restaurant.name, restaurant_path(restaurant.id), class: "list-group-item m-2 bg-success p-2  bg-opacity-2 text-light rounded" %>
+    <% end %>
+  </div>
+  <%= link_to "Create New Restaurant", new_restaurant_path, class: "btn btn-primary mt-4" %>
+</div>
